@@ -158,7 +158,7 @@ staff_summary = (
     .sort_values(by="Sales", ascending=False)
 )
 
-staff_summary["Pay"] = staff_summary["Sales"] * 0.50
+staff_summary["Pay"] = staff_summary["Sales"] * 0.47
 staff_summary["Sales"] = staff_summary["Sales"].map("${:,.2f}".format)
 staff_summary["Pay"] = staff_summary["Pay"].map("${:,.2f}".format)
 st.dataframe(staff_summary, use_container_width=True, hide_index=True)
